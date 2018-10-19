@@ -7,12 +7,12 @@ def reconstruct_trip(tickets):
   trip = []
 
   for i in range(len(tickets)):
-    if source in places:
-      if places[source] is not None:
-        trip.append(places[source])
-        source = places[source]
-      else: 
-        return []
+    if source in trips:
+      if trips[source] is not None:
+        trip.append(trips[source])
+      source = trips[source]
+    else: 
+      return []
   
   return trip
   pass 
